@@ -50,3 +50,7 @@ class Land(type, position) {
     type in ["dock", "farmland", "powerplant", "urbancity"]
     isinstance(position, tuple)
 }
+
+class dock(Land) {
+    dock.resource_production =
+}
