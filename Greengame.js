@@ -17,8 +17,9 @@ population = 5000
 resourcePoints = 0
 earthquakeLikehood = 0
 seaPollution_old = 1000
+cityCapacity = 6000
 ecoImbalance_oldconImbalance
-city = 1000 // 一回合消耗1000 resource points
+city = 1000 // 一回合消耗1000 resource points, 能linear about population 更好
 dock = 100
 
 ///
@@ -31,9 +32,9 @@ function updateValues(arrayPerRound) {
     var ecoImbalance_old = arrayPerRound[4];
     var population_old = arrayPerRound[0];
     var population_new = (FERT_BASE + numTech / TECH_MAX * 0.5 - seaPollution / SEA_MAX) * population_old + population_old
-    var population_new = (1 - population_old / cityCapacity)
-    var seaPollution_new = (seaPollution_old + dock + city) * 1.01 - 200 - conservation
-        // dock 是码头 city是城镇 每回合码头和城镇都会对海洋产生污染 每回合海洋自己可以修复200
+    var population_new = (1 - population_old / cityCapacity) population *
+        var seaPollution_new = (seaPollution_old + dock + city) * 1.01 - 200 - conservation
+            // dock 是码头 city是城镇 每回合码头和城镇都会对海洋产生污染 每回合海洋自己可以修复200
 
     var earthquakeLikelihood = (mine + farmland - forest + city) * EQ_COEFT
     var resourcePoints_new = resourcePoints_old - cityConsumption + powerplantGain + farmlandlGain + dockGain
