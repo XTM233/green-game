@@ -46,7 +46,8 @@ function randomDisasterMort(earthquakeLikelihood) {
 }
 //TODO OOP different land and their impact to environment
 
-class Land(type, position) {
+class Land() {
+
     type in ["dock", "farmland", "powerplant", "urbancity"]
     isinstance(position, tuple)
 }
