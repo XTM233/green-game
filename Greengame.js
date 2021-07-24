@@ -46,7 +46,7 @@ function randomDisasterMort(earthquakeLikelihood) {
 }
 //TODO OOP different land and their impact to environment
 
-class Land() {
+class Land() { // 这个land就是我们一直在说的tech
     def __init__(type, position):
         type in ["dock", "farmland", "powerplant", "urbancity"]
     isinstance(position, tuple)
