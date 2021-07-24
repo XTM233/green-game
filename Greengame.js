@@ -8,7 +8,7 @@ const SEA_MAX = 1500 //terminational condition concerning sea pollution
 const POP_MIN = 1
 const ECO_MAX = 1
 const RD_MAX, RD_MIN, TECH_MAX = 10 //tmp defined
-const FERT_BASE = 0.5
+const FERT_BASE = 1
 const MORT_BASE = 0.5
 const EQ_COEFT = 0.05 //tmp defined
 
