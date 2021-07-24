@@ -18,7 +18,7 @@ resourcePoints = 0
 earthquakeLikehood = 0
 seaPollution_old = 1000
 ecoImbalance_oldconImbalance
-city = 1000
+city = 1000 // 一回合消耗1000 resource points
 dock = 100
 
 ///
