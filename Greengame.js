@@ -60,4 +60,5 @@ class dock(Land) {
 function Land(type, position) {
     this.type = type;
     this.position = position
+    this.technogy = []
 }
