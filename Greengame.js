@@ -45,3 +45,7 @@ function randomDisasterMort(earthquakeLikelihood) {
     return earthquakeLikelihood * population // TODO 先 linear，过后再 random
 }
 //TODO OOP different land and their impact to environment
+
+class Land(type, position) {
+    type in ["dock", "farmland", ]
+}
