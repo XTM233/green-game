@@ -35,7 +35,7 @@ function updateValues(arrayPerRound) {
         // dock 是码头 city是城镇 每回合码头和城镇都会对海洋产生污染 每回合海洋自己可以修复200
 
     var earthquakeLikelihood = (mine + farmland - forest + city) * EQ_COEFT
-    var resourcePoints_new = resourcePoints_old - cityConsumption + mineGain + agriculturalGain + dockGain
+    var resourcePoints_new = resourcePoints_old - cityConsumption + powerplantGain + farmlandlGain + dockGain
     var ecoImbalance_new = (ecoImbalance_old + city + mine) * 1.01 - forest - conservation
     var techPoints_new = arrayPerRound[5] + population_old * TECH_POP_COEFT + qnsAnswered
     var arrayPerRound = [population_new, resourcePoints_new, earthquakeLikelihood, seaPollution_new, ecoImbalance_new, techPoints_new]
