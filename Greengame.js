@@ -34,7 +34,7 @@ function updateValues(arrayPerRound) {
     var seaPollution_new = (seaPollution_old + dock + city) * 1.01 - 200 - conservation
         // dock 是码头 city是城镇 每回合码头和城镇都会对海洋产生污染 每回合海洋自己可以修复200
 
-    var earthquakeLikelihood = (mine + agricultural - forest + city) * EQ_COEFT
+    var earthquakeLikelihood = (mine + farmland - forest + city) * EQ_COEFT
     var resourcePoints_new = resourcePoints_old - cityConsumption + mineGain + agriculturalGain + dockGain
     var ecoImbalance_new = (ecoImbalance_old + city + mine) * 1.01 - forest - conservation
     var techPoints_new = arrayPerRound[5] + population_old * TECH_POP_COEFT + qnsAnswered
@@ -47,5 +47,5 @@ function randomDisasterMort(earthquakeLikelihood) {
 //TODO OOP different land and their impact to environment
 
 class Land(type, position) {
-    type in ["dock", "farmland", ]
+    type in ["dock", "farmland", "minefield", ]
 }
