@@ -67,10 +67,10 @@ Land.prototype = {
         applyTechnology(tech): function { // drag event 玩家拖拽图标到可以apply科技的格子触发
             if (tech = "dock" && position not in coast) {
                 console.error(tech);
-            } else {
-                this: type = tech,
-            }
-            //如果不沿海就不能建dock
+            } else :{
+                    this: type = tech,
+                }
+                //如果不沿海就不能建dock
 
 
         }
