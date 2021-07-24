@@ -68,10 +68,10 @@ Land.prototype = {
             if (tech = "dock")
                 and(position not in coast) {
                     console.error(tech);
+                } else {
+                    this.type = tech
                 }
                 //如果不沿海就不能建dock
-            else :{
-                this.type = tech
-            }
+
 
         }
