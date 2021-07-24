@@ -64,7 +64,10 @@ function Land(type = "forest", position) {
 
 Land.prototype = {
     constructor: Land,
-    applyTechnology(tech): function {
+    applyTechnology(tech): function { // drag event 玩家拖拽图标到可以apply科技的格子触发
+        if tech = "dock"
+        and position not in coast
         this.type = tech
     }
+
 }
