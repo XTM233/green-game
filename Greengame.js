@@ -53,5 +53,6 @@ class Land() { // 这个land就是我们一直在说的tech
 }
 
 class dock(Land) {
+    def __init__
     dock.resource_production =
 }
