@@ -56,3 +56,5 @@ class dock(Land) {
     def __init__
     dock.resource_production =
 }
+
+function Land()
