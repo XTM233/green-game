@@ -64,7 +64,7 @@ function Land(type = "forest", position) {
 
 Land.prototype = {
     constructor: Land,
-    applyTechnology: function {
-        this.type
+    applyTechnology(tech): function {
+        this.type = tech
     }
 }
