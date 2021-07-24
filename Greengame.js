@@ -48,5 +48,5 @@ function randomDisasterMort(earthquakeLikelihood) {
 
 class Land(type, position) {
     type in ["dock", "farmland", "powerplant", "urbancity"]
-    isinstance
+    isinstance(position, tuple)
 }
