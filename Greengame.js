@@ -31,6 +31,7 @@ function updateValues(arrayPerRound) {
     var ecoImbalance_old = arrayPerRound[4];
     var population_old = arrayPerRound[0];
     var population_new = (FERT_BASE + numTech / TECH_MAX * 0.5 - seaPollution / SEA_MAX) * population_old + population_old
+    var population_new = (1 - population_old / 6000)
     var seaPollution_new = (seaPollution_old + dock + city) * 1.01 - 200 - conservation
         // dock 是码头 city是城镇 每回合码头和城镇都会对海洋产生污染 每回合海洋自己可以修复200
 
