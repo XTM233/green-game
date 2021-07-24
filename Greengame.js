@@ -57,4 +57,6 @@ class dock(Land) {
     dock.resource_production =
 }
 
-function Land()
+function Land(type, position) {
+    this.
+}
