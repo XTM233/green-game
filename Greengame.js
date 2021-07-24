@@ -57,8 +57,7 @@ class dock(Land) {
     dock.resource_production =
 }
 
-function Land(type, position) {
+function Land(type = "forest", position) {
     this.type = type;
     this.position = position
-    this.technogy = []
 }
