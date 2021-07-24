@@ -61,3 +61,5 @@ function Land(type = "forest", position) {
     this.type = type;
     this.position = position
 }
+
+Land.prototype()
