@@ -1,5 +1,5 @@
 var population, resourcePoints;
-var earthquakeLikelihood, seaPollution_old, seaPollution_new, ecoImbalance_new, ecoImbalance_old, techPoints, forest;
+var earthquakeLikelihood, seaPollution_old, seaPollution_new, ecoImbalance_new, ecoImbalance_old, techPoints, cityCapacity;
 var round = 0;
 var numTech = 0;
 
