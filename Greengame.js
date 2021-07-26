@@ -1,5 +1,5 @@
 var population, resourcePoints;
-var earthquakeLikelihood, seaPollution_old, seaPollution_new, ecoImbalance_new, ecoImbalance_old, techPoints, cityCapacity;
+var earthquakeLikelihood, seaPollution, ecoImbalance, ecoImbalance, techPoints, cityCapacity;
 var round = 0;
 var numTech = 0;
 
@@ -10,7 +10,7 @@ const ECO_MAX = 2000
 const RD_MAX, RD_MIN, TECH_MAX = 10 //tmp defined
 const FERT_BASE = 0.5
 const MORT_BASE = 0.5
-const EQ_COEFT = 0.05 //tmp defined
+const EQ_COEFT = 5 //tmp defined
 
 ///
 population = 5000
@@ -18,7 +18,7 @@ resourcePoints = 0
 earthquakeLikehood = 0
 seaPollution_old = 1000
 cityCapacity = 6000
-ecoImbalance_oldconImbalance
+ecoImbalance = 1000
 city = 1000 // 一回合消耗1000 resource points, 能linear about population 更好
 dockPollution = 100
 cityPollution = 200
@@ -27,14 +27,12 @@ forest = 5
 
 ///
 
-var arrayPerRound = [population, resourcePoints, earthquakeLikelihood, seaPollution, ecoImbalance, techPoints]
-
 function updateValues(arrayPerRound) {
     var seaPollution_old = arrayPerRound[3];
     var resourcePoints_old = arrayPerRound[1];
     var ecoImbalance_old = arrayPerRound[4];
     var population_old = arrayPerRound[0];
-    var earthquakeLikelihood = (mine + farmland - forest + city) * EQ_COEFT
+    var earthquakeLikelihood = (powerPlant + farmland - forest + city) * EQ_COEFT
     var population_new = (FERT_BASE + numTech / TECH_MAX * 0.5 - seaPollution / SEA_MAX + (cityCapcity - population_old) / cityCapacity) *
         population_old + population_old - randomDisaster(earthquakeLikelihood)
         // var population_new = (coefficient * (1 - population_old / cityCapacity) - seaPollution / SEA_MAX) * population_old + population_old - randomDisaster(earthquakeLikelihood)
@@ -49,7 +47,7 @@ function updateValues(arrayPerRound) {
 }
 
 function randomDisasterMort(earthquakeLikelihood) {
-    return earthquakeLikelihood * population // TODO 先 linear，过后再 random
+    return earthquakeLikelihood * population // TODO 先 linear，过后再 random 用binomial with earthquakelikehood as n
 }
 //TODO OOP different land and their impact to environment
 
@@ -83,5 +81,5 @@ Land.prototype = {
         }
 
 
-        //TODO dock on click增加resource point，增加sea pollution
+        //TODO dock on click增加resource point，增加sea pollution(隐藏)
         //TODO 回收建筑获得50%建造时花费的resource
